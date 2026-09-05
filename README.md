@@ -1,4 +1,4 @@
-# UnlockDaily
+# NexaNetwrok
 
 A mobile-first public site for a daily promotional campaign platform. This first GitHub milestone establishes the polished, responsive campaign experience without placing any promotional code in browser-visible content.
 
