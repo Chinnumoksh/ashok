@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#090b16" />
+    <meta name="description" content="A secure, time-gated promotional campaign platform." />
+    <title>UnlockDaily | Secure promo campaigns</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="UnlockDaily home"><span class="brand-mark">U</span>Unlock<span>Daily</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#campaigns">Today’s promos</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#security">Security</a>
+      </nav>
+      <a class="header-cta" href="#campaigns">Explore promos <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="live-dot"></span> Daily opportunities, securely unlocked</p>
+          <h1>The better way to run <em>daily promos.</em></h1>
+          <p class="hero-text">Discover time-limited offers through a simple, protected unlock journey. Clear steps. Fair claim limits. No clutter.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#campaigns">See live promos <span aria-hidden="true">→</span></a>
+            <a class="button button-quiet" href="#how-it-works">How it works</a>
+          </div>
+          <div class="trust-row">
+            <span>Protected links</span><i></i><span>Fair availability</span><i></i><span>Mobile first</span>
+          </div>
+        </div>
+
+        <div class="hero-card" aria-label="Unlock journey preview">
+          <div class="card-topline"><span>Secure unlock</span><span class="pill">Step 2 of 3</span></div>
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="progress-nodes" aria-hidden="true"><b></b><b></b><b></b></div>
+          <p class="journey-label">Your offer is protected until the journey is complete.</p>
+          <div class="timer-ring"><strong>00:15</strong><span>seconds</span></div>
+          <div class="step-info"><span>Step 2</span><strong>Explore today’s guide</strong><small>Continue when the timer completes</small></div>
+        </div>
+      </section>
+
+      <section class="campaign-section" id="campaigns">
+        <div class="section-heading">
+          <div><p class="eyebrow">Available now</p><h2>Today’s campaigns</h2></div>
+          <p class="section-note">Campaigns close when their claim limit is reached.</p>
+        </div>
+        <div class="campaign-grid" id="campaign-list" aria-live="polite"></div>
+      </section>
+
+      <section class="how-section" id="how-it-works">
+        <div class="section-heading"><div><p class="eyebrow">Built for trust</p><h2>Simple for visitors.<br />Thoughtful by design.</h2></div></div>
+        <div class="steps-grid">
+          <article><span class="step-number">01</span><h3>Open a protected link</h3><p>Every campaign uses a unique, non-guessable link. Promo codes never appear in the address.</p></article>
+          <article><span class="step-number">02</span><h3>Complete the journey</h3><p>Move through three short, useful content steps with clear progress and a stable countdown.</p></article>
+          <article><span class="step-number">03</span><h3>Claim with confidence</h3><p>The server checks timing, availability, and your session before revealing an eligible offer.</p></article>
+        </div>
+      </section>
+
+      <section class="security-section" id="security">
+        <div class="security-copy"><p class="eyebrow">Made to stay fair</p><h2>Protection is not an afterthought.</h2><p>Availability and campaign rules are validated on the server. Claim counts are updated atomically, so the last available promo always goes to just one eligible visitor.</p><a href="#campaigns" class="text-link">Browse available promos <span>→</span></a></div>
+        <div class="security-list"><div><span>✦</span><p><strong>Private promo data</strong><br />Never sent to a browser before a successful claim.</p></div><div><span>⌁</span><p><strong>Server-validated timers</strong><br />Changing a visible countdown does not unlock an offer.</p></div><div><span>✓</span><p><strong>Atomic availability</strong><br />No over-claiming when campaigns are nearly full.</p></div></div>
+      </section>
+    </main>
+
+    <footer><a class="brand" href="/"><span class="brand-mark">U</span>Unlock<span>Daily</span></a><p>Campaigns made clear, secure, and fair.</p><p>© <span id="year"></span> UnlockDaily</p></footer>
+    <dialog id="campaign-dialog" aria-labelledby="dialog-title"><button class="dialog-close" aria-label="Close">×</button><p class="eyebrow">Campaign preview</p><h2 id="dialog-title"></h2><p id="dialog-copy"></p><div class="preview-steps"><span class="active">1</span><i></i><span>2</span><i></i><span>3</span></div><button class="button button-primary" id="preview-button">Preview unlock journey <span aria-hidden="true">→</span></button><p class="dialog-note">This public preview contains no promo code. Production claims are completed through protected Firebase endpoints.</p></dialog>
+    <script src="/app.js"></script>
+  </body>
+</html>
+
